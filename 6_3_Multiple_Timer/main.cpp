@@ -11,11 +11,11 @@ int main(){
     timer_slow.start();
 
     while(1){
-        if(chrono::duration_cast<chrono::seconds>(timer_fast.elapsed_time()).count() > 2){
+        if(chrono::duration_cast<chrono::seconds>(timer_fast.elapsed_time()).count() > 1){
             led1 = !led1;
             timer_fast.reset();
         }
-        if(chrono::duration_cast<chrono::seconds>(timer_slow.elapsed_time()).count() > 1){
+        if(chrono::duration_cast<chrono::seconds>(timer_slow.elapsed_time()).count() > 2){
             led2 = !led2;
             timer_slow.reset();
         }
